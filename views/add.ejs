@@ -1,0 +1,46 @@
+<% include partials/header %>
+<div class="container">
+<form class="" action="" method="post">
+  <!-- ID:<br>
+  <input type="text" name="id"><br> -->
+  <div class="form-group">
+    <label for="string" class="col-sm-2 control-label">String</label>
+    <div class="col-sm-4">
+      <input type="string" class="form-control" name="string" placeholder="Please Input The String Number" required>
+    </div>
+    <br> <br>
+
+    <div class="form-group">
+      <label for="integer" class="col-sm-2 control-label">Integer</label>
+      <div class="col-sm-4">
+        <input type="number" step ="1" class="form-control" name="integer" placeholder="Please Input The Integer Number">
+      </div>
+      <div class="form-group">
+        <br><br>
+        <label for="flat" class="col-sm-2 control-label">Float</label>
+        <div class="col-sm-4">
+          <input type="number" step ="0.1"  class="form-control" name="float" placeholder="Please Input Float Number">
+        </div>
+        <br><br>
+
+        <div class="form-group">
+          <label for="date" class="col-sm-2 control-label">Date</label>
+          <div class="col-sm-4">
+            <input type="date" class="form-control" name="date" placeholder="Please Choose Date">
+          </div>
+          <br><br>
+
+          <div class="form-group">
+            <label for="boolean" class="col-sm-2 control-label">Boolean</label>
+            <div class="col-sm-4">
+              <select name="boolean" class="form-control">
+                <option value="true">True</option>
+                <option value="false">False</option>
+              </select>
+            </div>
+            <br><br>
+
+            <br>  <button type="submit" class="btn btn-success"=>Add New</button>
+          </form> <br>
+        </div>
+          <% include partials/footer %>

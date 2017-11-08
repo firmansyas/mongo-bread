@@ -1,0 +1,45 @@
+<% include partials/header %>
+
+<div class="container">
+      <div class="form-group">
+        <form class="edit" action='/edit/<%= item._id %>' method="POST">
+                <div class="form-group">
+          <label for="string" class="col-sm-2 control-label">String</label>
+          <div class="col-sm-4">
+            <input type="string" class="form-control" name="string" value="<%= item.string %>">
+          </div>
+          <br> <br>
+
+          <div class="form-group">
+            <label for="integer" class="col-sm-2 control-label">Integer</label>
+            <div class="col-sm-4">
+              <input type="integer" class="form-control" name="integer" value="<%= item.integer %>">
+            </div>
+            <br> <br>
+
+            <div class="form-group">
+              <label for="float" class="col-sm-2 control-label">Float</label>
+              <div class="col-sm-4">
+                <input type="float" class="form-control" name="float" value="<%= item.float %>">
+              </div>
+              <br> <br>
+
+              <div class="form-group">
+                <label for="date" class="col-sm-2 control-label">Date</label>
+                <div class="col-sm-4">
+                  <input type="date" class="form-control" name="date" value="<%= item.date %>">
+                </div>
+                <br><br>
+
+                <div class="form-group">
+                  <label for="boolean" class="col-sm-2 control-label">Boolean</label>
+                  <div class="col-sm-4">
+                    <select name="boolean" class="form-control">
+                      <option value="true"<%= item.boolean  ? ' selected' : ''; %>>True</option>
+                      <option value="false"<%= !item.boolean  ? ' selected' : ''; %>>False</option>
+                    </select>
+                  </div> <br> <br>
+    <button type="submit" class="btn btn-success"=>Update</button>
+    </form> <br>
+  </div>
+  <% include partials/footer %>
